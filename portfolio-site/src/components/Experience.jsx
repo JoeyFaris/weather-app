@@ -5,9 +5,10 @@ import reactImage from "../assets/react.png"
 import ruby from '../assets/ruby.png'
 import rails from '../assets/rails.png'
 import css from "../assets/css.png"
-import tailwind from "../assets/react.png"
+import tailwind from "../assets/tailwind.png"
 import mysql from "../assets/mysql.png"
 import github from "../assets/github.png"
+import postgresql from '../assets/postgresql.png'
 
 const Experience = () => {
     const techs = [
@@ -45,16 +46,22 @@ const Experience = () => {
             id:6,
             src: tailwind,
             title:'Tailwind',
-            style: 'shadow-orange-500'
+            style: 'shadow-teal-500'
         },
         {
             id:7,
             src: mysql,
             title:'mySQL',
-            style: 'shadow-pink-400'
+            style: 'shadow-blue-500'
         },
         {
             id:8,
+            src: postgresql,
+            title:'PostgreSQL',
+            style: 'shadow-gray-400'
+        },
+        {
+            id:9,
             src: github,
             title:'Github',
             style: 'shadow-gray-400'
@@ -71,9 +78,11 @@ const Experience = () => {
 
                 {
                     techs.map(({id, src, title, style}) => (
-                        <div className='shadow-md hover:scale-105 duration-500 py-2 rounded-lg'>
-                    <img src={javascript} alt="" className='w-20 mx-auto'/>
-                    <p className='mt-4'>HTML</p>
+                        <div 
+                        key={id}
+                        className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
+                    <img src={src} alt="" className='w-20 mx-auto'/>
+                    <p className='mt-4'>{title}</p>
                 </div>
                     ))
                 }
