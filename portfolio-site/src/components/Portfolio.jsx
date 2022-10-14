@@ -11,26 +11,41 @@ const Portfolio = () => {
             {
                 id: 1,
                 src: sudoku,
+                name: "Sudoku",
+                href: "http://sudoku.appsoftdev.com/"
+                
             },
             {
                 id: 2,
-                src: suiteMng
+                src: suiteMng,
+                name: "Suite Management",
+                href: "https://www.loom.com/share/06bb405f73714e30979de38c47d9ce6e"
             },
             {
                 id: 3,
-                src: bookReview
+                src: bookReview,
+                name: "Book Review"
             },
             {
                 id: 4,
-                src: bigO
+                src: bigO,
+                name: "Big O Notations",
+                blog: true,
+                href:"https://medium.com/@joeyfaris1/understanding-the-basics-of-big-o-complexities-18d3e249ddb1"
             },
             {
                 id: 5,
-                src: bcrypt
+                src: bcrypt,
+                name: "Bcrypt gem",
+                blog:true,
+                href:'https://medium.com/@joeyfaris1/active-record-migrations-1ffe85f65763'
             },
             {
                 id: 6,
-                src: activeRecord
+                src: activeRecord,
+                name: "ActiveRecord migrations",
+                blog: true,
+                href:"https://medium.com/@joeyfaris1/active-record-migrations-1ffe85f65763"
             },
         ]
   return (
@@ -43,18 +58,32 @@ const Portfolio = () => {
             </div>
             <div 
                   className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
-            {portfolios.map(({id,src}) => (
+            {portfolios.map(({id,src, href, name, blog}) => (
                 
 
                   <div key={id}
-                  className='shadow-md shadow-gray-600 rounded-lg'>
+                  className='shadow-md shadow-gray-600 rounded-xl'>
+                    <div className='text-2xl font-italic text-center rounded-md p-4 '>{name}</div>
                       <img 
                       src={src} 
                       alt='' 
                       className='rounded-md duration-200 hover:scale-105'/>
                       <div className='flex items-center justify-center'>
-                          <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
-                          <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+
+                        {blog ? 
+                        <a href={href} 
+                        target="_blank" 
+                        className='p-6 duration-200 hover:scale-105'>Medium Blog</a> 
+                        :
+                        <>
+                        <a href={href} 
+                        target='_blank'
+                        className='w-1/2 pl-11 py-3 m-4 duration-200 hover:scale-105'>Demo</a>
+                        <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
+                        </>
+                    }
+                       
+
                       </div>
                   </div>
       
