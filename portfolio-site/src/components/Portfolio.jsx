@@ -73,11 +73,13 @@ const Portfolio = () => {
                         {blog ? 
                         <a href={href} 
                         target="_blank" 
+                        rel="noreferrer"
                         className='p-6 duration-200 hover:scale-105'>Medium Blog</a> 
                         :
                         <>
                         <a href={href} 
                         target='_blank'
+                        rel="noreferrer"
                         className='w-1/2 pl-11 py-3 m-4 duration-200 hover:scale-105'>Demo</a>
                         <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
                         </>
