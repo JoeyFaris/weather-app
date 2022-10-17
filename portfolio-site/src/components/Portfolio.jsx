@@ -1,6 +1,5 @@
 import React from 'react'
 import sudoku from '../assets/sudoku.png'
-import bookReview from '../assets/bookReview.png'
 import bigO from '../assets/bigO.png'
 import bcrypt from '../assets/bcrypt.png'
 import activeRecord from '../assets/activeRecord.png'
