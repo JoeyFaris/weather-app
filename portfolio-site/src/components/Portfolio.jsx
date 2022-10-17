@@ -5,6 +5,7 @@ import bigO from '../assets/bigO.png'
 import bcrypt from '../assets/bcrypt.png'
 import activeRecord from '../assets/activeRecord.png'
 import suiteMng from '../assets/suiteMng.png'
+import codewars from '../assets/codewars.png'
 
 const Portfolio = () => {
         const portfolios = [
@@ -25,8 +26,8 @@ const Portfolio = () => {
             },
             {
                 id: 3,
-                src: bookReview,
-                name: "Book Review",
+                src: codewars,
+                name: "Code Wars Profile",
                 code: 'https://github.com/JoeyFaris/Book-Reviews-Media'
             },
             {
@@ -50,6 +51,7 @@ const Portfolio = () => {
                 blog: true,
                 href:"https://medium.com/@joeyfaris1/active-record-migrations-1ffe85f65763"
             },
+           
         ]
   return (
     <div name='portfolio' 
@@ -94,20 +96,24 @@ const Portfolio = () => {
                         :
                         <>
                         <a 
-                        href={code}
+                        href='https://www.codewars.com/users/JoeyFaris'
                         target="_blank" 
                         rel="noreferrer"
-                        className='w-1/2 px-12 py-3 m-4 duration-200 hover:scale-105'>Code</a>
+                        className='w-1/2 px-12 py-3 m-4 duration-200 hover:scale-105'>Profile</a>
                         </>
 
                     }
+                     
                        
 
                       </div>
+                      
                   </div>
       
                 
             ))}
+
+
          </div>
         </div>
     </div>
