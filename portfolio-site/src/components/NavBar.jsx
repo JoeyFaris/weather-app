@@ -27,7 +27,11 @@ const Navbar = () => {
       link: "contact",
     },
   ]; 
-
+  
+  function console() {
+    console.log('hello')
+  }
+ 
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
         <div>
@@ -59,7 +63,8 @@ const Navbar = () => {
                     key={id}
                     className="px-4 cursor-pointer capitalize py-6 text-4xl"
                     >
-                        <Link onClick={() => setNav(!nav)}
+                        <Link onClick={() => setNav(!nav)
+                        }
                         to={link} smooth duration={500}> 
                     {link}
                     </Link>
