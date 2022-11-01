@@ -14,6 +14,7 @@ function App() {
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
+  
   useEffect(() => {
     const fetchWeather = async () => {
       await getFormattedWeatherData({...query, units}).then((data) => {
